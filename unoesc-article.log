@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.26)  26 SEP 2025 22:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.26)  26 SEP 2025 22:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1604,6 +1604,10 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
 (C:\Users\viniv\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
+Overfull \hbox (19.84865pt too wide) in paragraph at lines 90--90
+ [] 
+ []
+
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 90.
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on i
@@ -1746,7 +1750,7 @@ ype1/public/lm/lmr10.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/lm/lmr12.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/lm/lmr7.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/lm/lmss10.pfb>
-Output written on unoesc-article.pdf (7 pages, 1701167 bytes).
+Output written on unoesc-article.pdf (7 pages, 1701427 bytes).
 PDF statistics:
  175 PDF objects out of 1000 (max. 8388607)
  31 named destinations out of 1000 (max. 500000)
