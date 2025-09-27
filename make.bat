@@ -8,7 +8,7 @@ REM Sets local variables
 setlocal EnableDelayedExpansion
 
 REM Source and base name
-set src=utfpr-article.tex
+set src=unoesc-article.tex
 if [%src%] == [] set /p src="Enter source filename with 3-digits extension: "
 set base_name=%src:~0,-4%
 

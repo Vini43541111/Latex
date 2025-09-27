@@ -29,10 +29,8 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{lmodern}
-\RequirePackage{newtxtext}
-\RequirePackage{newtxmath}
 \RequirePackage{textcomp}
-\RequirePackage{fontawesome}
+\RequirePackage{fontawesome5} % Versão mais nova e estável do FontAwesome
 \RequirePackage{microtype}
 \RequirePackage{xcolor}
 % \RequirePackage[showframe]{geometry}
@@ -158,9 +156,9 @@
 \newbox{\orcidiconbox}
 \sbox{\orcidiconbox}{\footnotesize\includegraphics[height = 1.7ex]{./Logos/orcid-id}}
 \newcommand*{\orcid}[1]{\href{https://orcid.org/#1}{\usebox{\orcidiconbox}~https://orcid.org/#1}}
-\newcommand*{\email}[1]{\href{mailto:#1}{\faEnvelopeO~#1}}
-\newcommand*{\affil}[1]{\faInstitution~#1}
-\newcommand*{\linkicon}{{\footnotesize\faExternalLink}}
+\newcommand*{\email}[1]{\href{mailto:#1}{\faEnvelope~#1}}
+\newcommand*{\affil}[1]{\faBuilding~#1}
+\newcommand*{\linkicon}{{\footnotesize\faExternalLinkAlt}}
 \instituicao{\unoescname}
 \newcommand*{\campusacr}{}
 \newcommand*{\campusname}{}
