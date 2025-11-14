@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.26)  26 SEP 2025 22:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.26)  13 NOV 2025 22:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1362,7 +1362,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 71
 (C:\Users\viniv\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-No file unoesc-article.aux.
+(unoesc-article.aux)
 \openout1 = `unoesc-article.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
@@ -1403,6 +1403,7 @@ Package microtype Info: Patching command `\showhyphens'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
+
 (C:\Users\viniv\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
@@ -1661,77 +1662,157 @@ Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
 [4]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[5]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[6]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 168.
+(Font)              <12> on input line 260.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 168.
+(Font)              <8> on input line 260.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 168.
-<Imagens/PrintUsuariodacarona.png, id=46, 2011.515pt x 1297.09593pt>
+(Font)              <6> on input line 260.
+
+Overfull \hbox (9.4424pt too wide) in paragraph at lines 262--262
+[]|\T1/lmr/bx/n/12 (-20) Característica| 
+ []
+
+
+Overfull \hbox (3.50706pt too wide) in paragraph at lines 262--262
+[]|\T1/lmr/bx/n/12 (-20) BlaBlaCar| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--262
+[]|\T1/lmr/bx/n/12 (+20) Waze
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--262
+[]|\T1/lmr/bx/n/12 (+20) Carona
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--263
+[]|\T1/lmr/m/n/12 (+20) Casa-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
+[]|\T1/lmr/m/n/12 (+20) Verificação
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+[]|\T1/lmr/m/n/12 (+20) Comunidade
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
+[]|\T1/lmr/m/n/12 (+20) Chat in-te-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
+[]|\T1/lmr/m/n/12 (+20) Custo para
+ []
+
+
+Overfull \hbox (16.55214pt too wide) in paragraph at lines 270--270
+[]|\T1/lmr/m/n/12 (-20) Descontinuado| 
+ []
+
+
+Overfull \hbox (16.55214pt too wide) in paragraph at lines 270--270
+[]|\T1/lmr/m/n/12 (-20) Descontinuado| 
+ []
+
+
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[7]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[8]
+<Imagens/PrintUsuariodacarona.png, id=74, 2011.515pt x 1297.09593pt>
 File: Imagens/PrintUsuariodacarona.png Graphic file (type png)
 <use Imagens/PrintUsuariodacarona.png>
-Package pdftex.def Info: Imagens/PrintUsuariodacarona.png  used on input line 1
-72.
+Package pdftex.def Info: Imagens/PrintUsuariodacarona.png  used on input line 3
+18.
 (pdftex.def)             Requested size: 348.2607pt x 224.56076pt.
-<Imagens/PrintCaroneiro.png, id=48, 2006.99812pt x 1235.36531pt>
+<Imagens/PrintCaroneiro.png, id=76, 2006.99812pt x 1235.36531pt>
 File: Imagens/PrintCaroneiro.png Graphic file (type png)
 <use Imagens/PrintCaroneiro.png>
-Package pdftex.def Info: Imagens/PrintCaroneiro.png  used on input line 186.
+Package pdftex.def Info: Imagens/PrintCaroneiro.png  used on input line 332.
 (pdftex.def)             Requested size: 348.2607pt x 214.36371pt.
-<Imagens/PrintCaroneiro2.png, id=49, 1952.79562pt x 1055.44313pt>
+<Imagens/PrintCaroneiro2.png, id=77, 1952.79562pt x 1055.44313pt>
 File: Imagens/PrintCaroneiro2.png Graphic file (type png)
 <use Imagens/PrintCaroneiro2.png>
-Package pdftex.def Info: Imagens/PrintCaroneiro2.png  used on input line 200.
+Package pdftex.def Info: Imagens/PrintCaroneiro2.png  used on input line 346.
 (pdftex.def)             Requested size: 348.2607pt x 188.21614pt.
 
 Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
-[5 <./Imagens/PrintUsuariodacarona.png>]
+[9 <./Imagens/PrintUsuariodacarona.png>]
 Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
-[6 <./Imagens/PrintCaroneiro.png> <./Imagens/PrintCaroneiro2.png>]
+[10 <./Imagens/PrintCaroneiro.png> <./Imagens/PrintCaroneiro2.png>]
 Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
-[7]
+[11]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
-LaTeX Warning: Empty bibliography on input line 244.
+
+[12]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[13]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[14]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[15]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[16]
+
+LaTeX Warning: Empty bibliography on input line 585.
 
 
 Class memoir Warning: The material used in the headers is too large
 (14.49998pt) for the given head height (14.22636pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 247.
+(in both cases you will find help in the memoir manual). on input line 588.
 
 (unoesc-article.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                unoesc-article
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'unoesc-article.run.xml'.
 \openout1 = `unoesc-article.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34956 strings out of 474486
- 634255 string characters out of 5743755
- 1938542 words of memory out of 5000000
- 56629 multiletter control sequences out of 15000+600000
- 626861 words of font info for 156 fonts, out of 8000000 for 9000
+ 35065 strings out of 474486
+ 635710 string characters out of 5743755
+ 1947542 words of memory out of 5000000
+ 56673 multiletter control sequences out of 15000+600000
+ 627892 words of font info for 167 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,107p,1420b,4312s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -1750,9 +1831,9 @@ ype1/public/lm/lmr10.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/lm/lmr12.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/lm/lmr7.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/lm/lmss10.pfb>
-Output written on unoesc-article.pdf (7 pages, 1701427 bytes).
+Output written on unoesc-article.pdf (16 pages, 1750369 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 43152 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 350 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
+ 43400 words of extra memory for PDF output out of 51595 (max. 10000000)
 

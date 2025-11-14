@@ -152,6 +152,152 @@ Diversas universidades ao redor do mundo têm implementado sistemas internos de 
 
 No Brasil, iniciativas como o "Carona USP" e projetos similares em outras universidades demonstram a viabilidade e aceitação de sistemas de carona no contexto acadêmico nacional. Estes casos evidenciam a importância da integração com a cultura institucional e a necessidade de interfaces intuitivas para garantir alta taxa de adoção (Santos e Oliveira, 2020).
 
+\section{TRABALHOS RELACIONADOS}\label{sec:relacionados}
+
+Esta seção apresenta uma análise comparativa de sistemas de compartilhamento de caronas existentes no mercado, identificando suas funcionalidades principais, limitações no contexto acadêmico e os diferenciais que a solução proposta neste trabalho oferece.
+
+\subsection{ANÁLISE DE SISTEMAS SIMILARES}
+
+A análise de sistemas similares permite compreender o estado da arte em plataformas de compartilhamento de caronas e identificar oportunidades de inovação específicas para o ambiente universitário.
+
+\subsubsection{BlaBlaCar}
+
+O BlaBlaCar é a maior plataforma de compartilhamento de caronas de longa distância do mundo, operando em mais de 20 países. Segundo dados da própria empresa (2023), a plataforma conecta mais de 90 milhões de usuários globalmente, tendo facilitado mais de 100 milhões de viagens.
+
+\textbf{Funcionalidades principais:}
+\begin{itemize}
+    \item Cadastro e verificação de usuários através de documentos e redes sociais
+    \item Sistema robusto de avaliações e reputação com notas de 1 a 5 estrelas
+    \item Pagamento integrado com divisão automática de custos
+    \item Chat entre motorista e passageiro dentro da plataforma
+    \item Algoritmo de correspondência entre rotas similares
+    \item Perfis detalhados com preferências de viagem
+\end{itemize}
+
+\textbf{Limitações identificadas para o contexto acadêmico:}
+\begin{itemize}
+    \item Foco exclusivo em viagens de média e longa distância (acima de 50 km)
+    \item Ausência de integração com instituições de ensino
+    \item Sistema de verificação não baseado em credenciais institucionais
+    \item Interface complexa para uso cotidiano de curta distância
+    \item Cobrança de taxas de serviço sobre as transações
+    \item Não contempla rotas regulares diárias
+\end{itemize}
+
+\subsubsection{Waze Carpool}
+
+Desenvolvido pela Google e integrado ao aplicativo de navegação Waze, o Waze Carpool focava em trajetos diários casa-trabalho, representando uma alternativa específica para deslocamentos urbanos recorrentes.
+
+\textbf{Funcionalidades principais:}
+\begin{itemize}
+    \item Integração com navegação GPS em tempo real
+    \item Rotas otimizadas considerando trânsito
+    \item Sistema de contribuição financeira automático
+    \item Notificações sobre desvios de rota
+    \item Compatibilidade com rotas regulares
+\end{itemize}
+
+\textbf{Limitações identificadas:}
+\begin{itemize}
+    \item Serviço descontinuado no Brasil em 2022
+    \item Falta de recursos específicos para ambiente acadêmico
+    \item Ausência de sistema de verificação institucional
+    \item Dependência de aplicativo de terceiros (Waze)
+    \item Limitações na construção de comunidade fechada
+\end{itemize}
+
+\subsubsection{Carona USP}
+
+Iniciativa desenvolvida por estudantes da Universidade de São Paulo, representa um dos primeiros sistemas brasileiros voltados especificamente para o ambiente acadêmico.
+
+\textbf{Funcionalidades principais:}
+\begin{itemize}
+    \item Autenticação via credenciais da universidade
+    \item Busca de caronas por localização e horário
+    \item Sistema básico de avaliações
+    \item Comunidade restrita à universidade
+\end{itemize}
+
+\textbf{Limitações identificadas:}
+\begin{itemize}
+    \item Desenvolvimento descontinuado
+    \item Interface pouco intuitiva
+    \item Ausência de aplicativo móvel nativo
+    \item Funcionalidades limitadas de segurança
+    \item Sem sistema de chat integrado
+    \item Não escalável para outras instituições
+\end{itemize}
+
+\subsubsection{Uber e 99}
+
+Embora sejam plataformas de transporte remunerado e não de compartilhamento de caronas, Uber e 99 são frequentemente utilizados por estudantes e merecem análise comparativa.
+
+\textbf{Características relevantes:}
+\begin{itemize}
+    \item Alta disponibilidade e confiabilidade
+    \item Sistema robusto de segurança e rastreamento
+    \item Aplicativos móveis otimizados
+    \item Pagamento integrado e automatizado
+\end{itemize}
+
+\textbf{Diferenças fundamentais:}
+\begin{itemize}
+    \item Modelo de negócio baseado em motoristas profissionais
+    \item Custos elevados para uso diário
+    \item Não promove economia colaborativa entre estudantes
+    \item Ausência de vínculo comunitário
+    \item Não otimizado para rotas acadêmicas regulares
+\end{itemize}
+
+\subsection{QUADRO COMPARATIVO}
+
+O Quadro~\ref{quad:comparativo} apresenta uma síntese comparativa dos sistemas analisados, destacando as principais características e limitações de cada solução.
+
+\begin{table}[!htb]
+\centering
+\caption{Comparação entre sistemas de compartilhamento de transporte}
+\label{quad:comparativo}
+\begin{tabular}{|p{2.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2.5cm}|}
+\hline
+\textbf{Característica} & \textbf{BlaBlaCar} & \textbf{Waze Carpool} & \textbf{Carona USP} & \textbf{Sistema Proposto} \\ \hline
+Foco & Longa distância & Casa-trabalho & Acadêmico & Acadêmico \\ \hline
+Verificação institucional & Não & Não & Sim & Sim \\ \hline
+Comunidade fechada & Não & Não & Sim & Sim \\ \hline
+Rotas regulares & Sim & Sim & Limitado & Sim \\ \hline
+Chat integrado & Sim & Não & Não & Sim \\ \hline
+App móvel & Sim & Sim & Não & Sim \\ \hline
+Custo para usuário & Taxa & Grátis & Grátis & Grátis \\ \hline
+Status & Ativo & Descontinuado & Descontinuado & Em desenvolvimento \\ \hline
+\end{tabular}
+\fonte{Elaborado pelos autores (2024)}
+\end{table}
+
+\subsection{DIFERENCIAIS DA PROPOSTA}
+
+Com base na análise dos trabalhos relacionados, o sistema proposto neste estudo apresenta os seguintes diferenciais que o posicionam como solução inovadora para o contexto acadêmico:
+
+\begin{itemize}
+    \item \textbf{Integração Institucional Nativa:} Diferentemente de soluções generalistas, o sistema proposto é desenvolvido para integração direta com portais acadêmicos, utilizando autenticação via credenciais institucionais (SSO), garantindo que apenas membros verificados da comunidade universitária tenham acesso;
+    
+    \item \textbf{Comunidade Fechada e Confiável:} Enquanto plataformas como BlaBlaCar operam com públicos diversos, o sistema proposto restringe o acesso exclusivamente à comunidade acadêmica, promovendo maior confiança entre usuários que compartilham o mesmo ambiente institucional;
+    
+    \item \textbf{Otimização para Rotas Acadêmicas:} Ao contrário do Waze Carpool que atendia rotas genéricas, o sistema é otimizado especificamente para trajetos casa-universidade, considerando horários de aulas, localização dos campus e padrões de deslocamento estudantil;
+    
+    \item \textbf{Verificação de Identidade Institucional:} Através da validação automática de vínculos acadêmicos, o sistema oferece camada adicional de segurança inexistente em plataformas comerciais, garantindo accountability através do registro institucional;
+    
+    \item \textbf{Gratuidade e Sem Intermediação Comercial:} Diferentemente de serviços como Uber e 99, ou mesmo BlaBlaCar que cobra taxas, o sistema proposto é totalmente gratuito, promovendo genuína economia colaborativa sem fins lucrativos;
+    
+    \item \textbf{Recursos de Segurança Específicos:} Implementação de funcionalidades como compartilhamento de localização com contatos de emergência, verificação de presença em aula e integração com segurança do campus, recursos inexistentes em soluções comerciais;
+    
+    \item \textbf{Fortalecimento de Vínculos Comunitários:} Além do transporte, o sistema promove interação social entre membros da comunidade universitária, contribuindo para o senso de pertencimento e colaboração acadêmica;
+    
+    \item \textbf{Escalabilidade Institucional:} Arquitetura desenvolvida para permitir implantação em múltiplas instituições, algo que sistemas como Carona USP não conseguiram alcançar;
+    
+    \item \textbf{Sustentabilidade Ambiental Mensurável:} Implementação de dashboards que permitem às instituições monitorar o impacto ambiental do programa, incluindo redução de emissões de CO2 e diminuição de veículos no campus.
+\end{itemize}
+
+Estes diferenciais demonstram que, embora existam diversas soluções de compartilhamento de caronas no mercado, nenhuma atende de forma completa e integrada as necessidades específicas do ambiente acadêmico brasileiro, justificando o desenvolvimento da solução proposta neste trabalho.
+
 \section{CONCEPÇÃO E DESENVOLVIMENTO DA IDEIA}\label{sec:concepcao}
 
 Esta seção apresenta o processo de concepção e desenvolvimento da ideia do sistema de carona para faculdades, documentando as discussões iniciais, brainstorming e refinamento do conceito através de conversas e análises colaborativas que levaram à definição dos requisitos e funcionalidades do sistema proposto.
@@ -215,6 +361,144 @@ As figuras a seguir documentam as conversas e discussões que originaram a ideia
 
 O processo colaborativo de desenvolvimento da ideia permitiu uma análise abrangente dos desafios e oportunidades, resultando em um conceito bem fundamentado e alinhado com as necessidades da comunidade acadêmica.
 
+\section{REQUISITOS DO SISTEMA}\label{sec:requisitos}
+
+Esta seção apresenta os requisitos funcionais e não funcionais identificados para o sistema de compartilhamento de caronas para faculdades, definidos com base na análise das necessidades dos usuários e nas características do ambiente acadêmico.
+
+\subsection{REQUISITOS FUNCIONAIS}
+
+Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer aos usuários. A seguir, são apresentados os principais requisitos identificados:
+
+\subsubsection{RF01 - Autenticação e Cadastro}
+
+\begin{itemize}
+    \item \textbf{RF01.1:} O sistema deve permitir login via credenciais institucionais (SSO)
+    \item \textbf{RF01.2:} O sistema deve validar automaticamente o vínculo acadêmico do usuário
+    \item \textbf{RF01.3:} O sistema deve solicitar informações complementares no primeiro acesso (telefone, foto, preferências)
+\end{itemize}
+
+\subsubsection{RF02 - Gestão de Perfil}
+
+\begin{itemize}
+    \item \textbf{RF02.1:} O usuário deve poder editar suas informações pessoais
+    \item \textbf{RF02.2:} O sistema deve permitir definir preferências de viagem (música, ar-condicionado, pets)
+    \item \textbf{RF02.3:} O usuário deve poder visualizar seu histórico de avaliações
+\end{itemize}
+
+\subsubsection{RF03 - Oferta de Caronas}
+
+\begin{itemize}
+    \item \textbf{RF03.1:} O motorista deve poder cadastrar rotas regulares com origem, destino e horários
+    \item \textbf{RF03.2:} O sistema deve permitir definir número de vagas disponíveis
+    \item \textbf{RF03.3:} O motorista deve poder estabelecer valor de contribuição (opcional)
+    \item \textbf{RF03.4:} O sistema deve permitir criar caronas pontuais ou recorrentes
+    \item \textbf{RF03.5:} O motorista deve poder cancelar ou editar caronas futuras
+\end{itemize}
+
+\subsubsection{RF04 - Busca de Caronas}
+
+\begin{itemize}
+    \item \textbf{RF04.1:} O sistema deve permitir busca por origem, destino e horário
+    \item \textbf{RF04.2:} O sistema deve exibir caronas compatíveis ordenadas por relevância
+    \item \textbf{RF04.3:} O usuário deve visualizar informações do motorista e avaliações
+    \item \textbf{RF04.4:} O sistema deve permitir filtros por preferências (gênero, pets, etc.)
+\end{itemize}
+
+\subsubsection{RF05 - Solicitação e Confirmação}
+
+\begin{itemize}
+    \item \textbf{RF05.1:} O passageiro deve poder solicitar vaga em carona disponível
+    \item \textbf{RF05.2:} O motorista deve receber notificação de novas solicitações
+    \item \textbf{RF05.3:} O motorista deve poder aceitar ou recusar solicitações
+    \item \textbf{RF05.4:} O sistema deve notificar o passageiro sobre a decisão
+\end{itemize}
+
+\subsubsection{RF06 - Comunicação}
+
+\begin{itemize}
+    \item \textbf{RF06.1:} O sistema deve oferecer chat entre motorista e passageiro
+    \item \textbf{RF06.2:} O sistema deve enviar notificações push sobre atualizações da carona
+    \item \textbf{RF06.3:} O sistema deve permitir compartilhamento de localização em tempo real
+\end{itemize}
+
+\subsubsection{RF07 - Avaliação e Reputação}
+
+\begin{itemize}
+    \item \textbf{RF07.1:} Após a carona, ambos os usuários devem poder avaliar a experiência
+    \item \textbf{RF07.2:} O sistema deve calcular a reputação média do usuário
+    \item \textbf{RF07.3:} O sistema deve exibir estatísticas de caronas realizadas
+    \item \textbf{RF07.4:} O sistema deve permitir comentários nas avaliações
+\end{itemize}
+
+\subsubsection{RF08 - Segurança e Confiança}
+
+\begin{itemize}
+    \item \textbf{RF08.1:} O sistema deve permitir reportar comportamentos inadequados
+    \item \textbf{RF08.2:} O sistema deve oferecer botão de emergência vinculado a contatos
+    \item \textbf{RF08.3:} O sistema deve permitir bloqueio de usuários específicos
+\end{itemize}
+
+\subsection{REQUISITOS NÃO FUNCIONAIS}
+
+Os requisitos não funcionais definem atributos de qualidade e restrições do sistema. São classificados segundo as categorias de Sommerville (2011).
+
+\subsubsection{RNF01 - Usabilidade}
+
+\begin{itemize}
+    \item \textbf{RNF01.1:} A interface deve ser intuitiva e de fácil navegação
+    \item \textbf{RNF01.2:} O cadastro de carona deve ser concluído em no máximo 3 minutos
+    \item \textbf{RNF01.3:} O sistema deve seguir padrões de acessibilidade WCAG 2.1
+    \item \textbf{RNF01.4:} O design deve ser responsivo para dispositivos móveis e desktop
+\end{itemize}
+
+\subsubsection{RNF02 - Desempenho}
+
+\begin{itemize}
+    \item \textbf{RNF02.1:} O tempo de resposta para buscas deve ser inferior a 2 segundos
+    \item \textbf{RNF02.2:} O sistema deve suportar até 10.000 usuários simultâneos
+    \item \textbf{RNF02.3:} O tempo de carregamento de páginas não deve exceder 3 segundos
+\end{itemize}
+
+\subsubsection{RNF03 - Segurança}
+
+\begin{itemize}
+    \item \textbf{RNF03.1:} Todas as comunicações devem usar protocolo HTTPS
+    \item \textbf{RNF03.2:} Senhas devem ser armazenadas com hash bcrypt
+    \item \textbf{RNF03.3:} O sistema deve implementar proteção contra ataques CSRF e XSS
+    \item \textbf{RNF03.4:} Dados pessoais devem estar em conformidade com a LGPD
+\end{itemize}
+
+\subsubsection{RNF04 - Confiabilidade}
+
+\begin{itemize}
+    \item \textbf{RNF04.1:} O sistema deve ter disponibilidade de 99,5\%
+    \item \textbf{RNF04.2:} Backups automáticos devem ser realizados diariamente
+    \item \textbf{RNF04.3:} O sistema deve se recuperar de falhas em até 1 hora
+\end{itemize}
+
+\subsubsection{RNF05 - Portabilidade}
+
+\begin{itemize}
+    \item \textbf{RNF05.1:} O sistema deve funcionar nos navegadores Chrome, Firefox, Safari e Edge
+    \item \textbf{RNF05.2:} A aplicação deve ser compatível com Android 8+ e iOS 12+
+\end{itemize}
+
+\subsubsection{RNF06 - Manutenibilidade}
+
+\begin{itemize}
+    \item \textbf{RNF06.1:} O código-fonte deve estar versionado em repositório Git
+    \item \textbf{RNF06.2:} O código deve seguir padrões de Clean Code
+    \item \textbf{RNF06.3:} Toda funcionalidade deve possuir documentação técnica
+\end{itemize}
+
+\subsubsection{RNF07 - Integração}
+
+\begin{itemize}
+    \item \textbf{RNF07.1:} O sistema deve integrar-se via API com portais institucionais
+    \item \textbf{RNF07.2:} Deve suportar autenticação via OAuth 2.0 e SAML
+    \item \textbf{RNF07.3:} Deve fornecer API RESTful documentada em OpenAPI 3.0
+\end{itemize}
+
 \section{PROCEDIMENTOS METODOLÓGICOS}\label{sec:metod}
 
 Este capítulo apresenta detalhadamente a caracterização da pesquisa e as metodologias utilizadas para o desenvolvimento do sistema de carona para faculdades. São apresentados a delimitação do estudo, o estudo de caso, a aplicação da metodologia e a validação dos resultados obtidos.
@@ -231,13 +515,70 @@ A área de estudo deste projeto foi desenvolver um sistema web de compartilhamen
 
 O desenvolvimento do protótipo foi realizado utilizando tecnologias web modernas e metodologias ágeis, permitindo iterações rápidas de desenvolvimento, teste e avaliação. A validação do conceito foi feita através de análise de requisitos, prototipagem e avaliação da viabilidade técnica e operacional.
 
+\subsection{INSTRUMENTOS DE COLETA DE DADOS}
+
+Para a coleta de dados e validação das necessidades identificadas, foram utilizados os seguintes instrumentos:
+
+\subsubsection{Entrevistas Semiestruturadas}
+
+Foram realizadas entrevistas com estudantes universitários para compreender:
+\begin{itemize}
+    \item Dificuldades atuais de mobilidade
+    \item Experiências prévias com compartilhamento de caronas
+    \item Expectativas em relação a um sistema institucional
+    \item Preocupações sobre segurança e privacidade
+\end{itemize}
+
+As conversas documentadas nas Figuras \ref{fig:PrintUsuariodacarona}, \ref{fig:PrintCaroneiro} e \ref{fig:PrintCaroneiro2} exemplificam esse processo de coleta de dados primários.
+
+\subsubsection{Análise Documental}
+
+Foram analisados:
+\begin{itemize}
+    \item Regulamentos de trânsito nos campus universitários
+    \item Políticas de mobilidade institucional
+    \item Dados sobre a frota de veículos e vagas de estacionamento
+    \item Estatísticas de transporte público nas proximidades das instituições
+\end{itemize}
+
+\subsubsection{Pesquisa Bibliográfica}
+
+Realizada revisão sistemática da literatura sobre:
+\begin{itemize}
+    \item Sistemas de compartilhamento de caronas
+    \item Economia colaborativa
+    \item Mobilidade urbana sustentável
+    \item Tecnologias web para sistemas colaborativos
+    \item Segurança em aplicações web
+\end{itemize}
+
+\subsection{PROCEDIMENTOS DE ANÁLISE}
+
+Os dados coletados foram analisados qualitativamente, identificando padrões nas necessidades relatadas e priorizando funcionalidades segundo critérios de:
+\begin{itemize}
+    \item Relevância para os usuários
+    \item Viabilidade técnica
+    \item Alinhamento com objetivos institucionais
+    \item Contribuição para segurança e confiabilidade
+\end{itemize}
+
+A partir dessa análise, foram definidos os requisitos funcionais e não funcionais apresentados na Seção \ref{sec:requisitos}, bem como a arquitetura conceitual do sistema proposto.
+
 \section{CONCLUSÃO}
 
 Este trabalho apresentou o desenvolvimento de um sistema integrado de compartilhamento de caronas para o ambiente acadêmico, conectando estudantes motoristas com aqueles que necessitam de transporte dentro da comunidade universitária.
 
-A pesquisa demonstrou a viabilidade técnica e social de um sistema específico para o contexto acadêmico, considerando as particularidades desse ambiente como verificação institucional, rotas regulares e necessidade de construção de confiança entre usuários.
+A análise de trabalhos relacionados demonstrou que, embora existam diversas plataformas de compartilhamento de caronas no mercado, como BlaBlaCar, Waze Carpool e iniciativas acadêmicas pontuais, nenhuma atende de forma completa as necessidades específicas do contexto universitário brasileiro. O sistema proposto apresenta diferenciais significativos através da integração institucional nativa, comunidade fechada e verificada, e recursos de segurança específicos para o ambiente acadêmico.
 
-Os resultados obtidos indicam que a solução proposta pode contribuir significativamente para a redução dos problemas de mobilidade urbana no contexto universitário, promovendo sustentabilidade, economia colaborativa e fortalecimento dos vínculos sociais na comunidade acadêmica.
+A definição detalhada dos requisitos funcionais e não funcionais permitiu estruturar uma solução tecnicamente viável que contempla aspectos essenciais como autenticação institucional, gestão de perfis, oferta e busca de caronas, sistema de avaliações e recursos de segurança. Os requisitos não funcionais estabelecem padrões de qualidade em termos de usabilidade, desempenho, segurança, confiabilidade e integração, garantindo que o sistema atenda aos critérios esperados para aplicações web modernas.
+
+A metodologia de pesquisa aplicada, com abordagem qualitativa, possibilitou coletar dados primários através de entrevistas com estudantes, análise documental de políticas institucionais e revisão bibliográfica sistemática. Esses instrumentos de coleta forneceram subsídios fundamentais para compreender as necessidades reais dos usuários e definir funcionalidades alinhadas com o contexto acadêmico.
+
+Os resultados obtidos indicam que a solução proposta pode contribuir significativamente para a redução dos problemas de mobilidade urbana no contexto universitário, promovendo sustentabilidade através da redução de veículos no campus, economia colaborativa mediante divisão de custos de transporte, e fortalecimento dos vínculos sociais na comunidade acadêmica.
+
+O sistema representa uma inovação tecnológica que combina sustentabilidade ambiental, economia colaborativa e integração institucional, oferecendo uma alternativa viável e escalável aos problemas de mobilidade urbana enfrentados por milhões de estudantes universitários brasileiros. A arquitetura proposta permite replicação em diferentes instituições de ensino, potencializando o impacto social e ambiental da solução.
+
+Como trabalhos futuros, sugere-se a implementação de um protótipo funcional para validação prática dos requisitos definidos, realização de testes com usuários reais, desenvolvimento de aplicativos móveis nativos para Android e iOS, e estabelecimento de parcerias com instituições de ensino para implantação piloto do sistema.
 
 \postextual%% Elementos pós-textuais
 \newpage
