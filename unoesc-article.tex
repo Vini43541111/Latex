@@ -97,7 +97,7 @@ O crescimento acelerado das cidades brasileiras e a concentração de instituiç
 
 A problemática da mobilidade estudantil se manifesta através de diversos aspectos: altos custos de transporte público e combustível, congestionamentos urbanos, escassez de vagas de estacionamento nos campus universitários, impactos ambientais decorrentes da emissão de poluentes e a necessidade crescente de soluções sustentáveis e colaborativas. Neste contexto, o compartilhamento de caronas emerge como uma alternativa viável e promissora para mitigar esses problemas.
 
-A economia colaborativa, conceito que engloba o compartilhamento de recursos entre indivíduos através de plataformas digitais, tem se consolidado como uma tendência global. Aplicações como Uber, BlaBlaCar e Waze Carpool demonstram o potencial dessa modalidade de transporte, promovendo não apenas economia financeira, mas também benefícios sociais e ambientais. No ambiente acadêmico, essa prática assume características particulares, pois ocorre dentro de uma comunidade fechada e com rotinas previsíveis.
+A economia colaborativa, conceito que engloba o compartilhamento de recursos entre indivíduos através de plataformas digitais, tem se consolidado como uma tendência global. Diversas aplicações de transporte compartilhado têm demonstrado o potencial dessa modalidade, promovendo não apenas economia financeira, mas também benefícios sociais e ambientais. No ambiente acadêmico, essa prática assume características particulares, pois ocorre dentro de uma comunidade fechada e com rotinas previsíveis.
 
 As instituições de ensino superior, por sua vez, têm buscado alternativas para reduzir os problemas de mobilidade que afetam sua comunidade acadêmica. A implementação de sistemas internos de carona, integrados aos portais institucionais, representa uma oportunidade de oferecer aos estudantes uma solução tecnológica segura, confiável e alinhada com os valores de sustentabilidade e colaboração que caracterizam o ambiente universitário.
 
@@ -105,17 +105,19 @@ Diante deste cenário, surge a necessidade de desenvolver um sistema específico
 
 Assim, o presente trabalho tem como \textbf{objetivo geral} desenvolver um sistema web integrado de compartilhamento de caronas para instituições de ensino superior, baseado em arquitetura de componentes e modelagem orientada a objetos, conectando estudantes motoristas com aqueles que necessitam de transporte, promovendo mobilidade sustentável, redução de custos e fortalecimento dos vínculos sociais na comunidade acadêmica.
 
-Os \textbf{objetivos específicos} incluem: 
+\subsection{OBJETIVOS ESPECÍFICOS}
+
+Para alcançar o objetivo geral, foram definidos os seguintes objetivos específicos:
 
 \begin{enumerate}
-    \item Analisar sistemas de carona existentes (BlaBlaCar, Waze Carpool, Carona USP) identificando suas limitações no contexto acadêmico
-    \item Modelar o sistema utilizando diagramas UML (casos de uso, classes, sequência, atividades e componentes) para especificar requisitos e arquitetura
-    \item Definir requisitos funcionais e não funcionais baseados na modelagem desenvolvida
-    \item Especificar arquitetura em camadas (Apresentação, API, Serviços, Dados) com integração SSO institucional
-    \item Projetar modelo de classes contemplando entidades principais: Usuario, Carona, Solicitacao, Avaliacao e Mensagem
-    \item Definir fluxos de interação através de diagramas de sequência para operações críticas (autenticação, solicitação, aceite, avaliação)
-    \item Estabelecer processos de negócio através de diagramas de atividades para criação de caronas e processamento de solicitações
-    \item Documentar requisitos de segurança, desempenho e confiabilidade conforme padrões de engenharia de software
+    \item Analisar sistemas de carona existentes identificando suas limitações no contexto acadêmico;
+    \item Modelar o sistema utilizando diagramas UML (casos de uso, classes, sequência, atividades e componentes) para especificar requisitos e arquitetura;
+    \item Definir requisitos funcionais e não funcionais baseados na modelagem desenvolvida;
+    \item Especificar arquitetura em camadas (Apresentação, API, Serviços, Dados) com integração SSO institucional;
+    \item Projetar modelo de classes contemplando entidades principais: Usuario, Carona, Solicitacao, Avaliacao e Mensagem;
+    \item Definir fluxos de interação através de diagramas de sequência para operações críticas (autenticação, solicitação, aceite, avaliação);
+    \item Estabelecer processos de negócio através de diagramas de atividades para criação de caronas e processamento de solicitações;
+    \item Documentar requisitos de segurança, desempenho e confiabilidade conforme padrões de engenharia de software.
 \end{enumerate}
 
 A \textbf{relevância} deste estudo reside em múltiplos aspectos: (i) contribui para solução de problemas reais de mobilidade enfrentados pela comunidade acadêmica; (ii) aplica metodologia rigorosa de engenharia de software com modelagem UML completa; (iii) integra conceitos de economia colaborativa, segurança da informação e arquitetura de sistemas distribuídos; (iv) oferece solução tecnológica alinhada com responsabilidade social e ambiental; (v) documenta processo completo de análise, modelagem e especificação de requisitos, servindo como referência para trabalhos futuros; e (vi) demonstra aplicação prática de padrões de projeto e boas práticas de desenvolvimento de software.
@@ -131,9 +133,9 @@ De acordo com dados do Departamento Nacional de Trânsito (DENATRAN), a frota br
 
 \subsection{SISTEMAS DE CARONA EXISTENTES}
 
-Plataformas como BlaBlaCar, pioneira no segmento de caronas de longa distância, demonstram a viabilidade técnica e comercial dos sistemas de compartilhamento de transporte. Segundo Ferreira et al. (2018), essas plataformas utilizam algoritmos de correspondência entre oferta e demanda, sistemas de avaliação mútua e mecanismos de pagamento digital para facilitar as transações.
+Diversas plataformas de compartilhamento de transporte têm demonstrado a viabilidade técnica e comercial desse modelo de negócio. Segundo Ferreira et al. (2018), essas plataformas utilizam algoritmos de correspondência entre oferta e demanda, sistemas de avaliação mútua e mecanismos de pagamento digital para facilitar as transações.
 
-No contexto brasileiro, aplicativos como Waze Carpool e iniciativas locais têm explorado o mercado de caronas urbanas. Entretanto, Silva e Costa (2020) apontam limitações desses sistemas quando aplicados ao ambiente acadêmico, incluindo falta de verificação institucional, ausência de integração com sistemas educacionais e questões de confiança entre usuários desconhecidos.
+No contexto brasileiro, diferentes iniciativas têm explorado o mercado de caronas urbanas. Entretanto, Silva e Costa (2020) apontam limitações desses sistemas quando aplicados ao ambiente acadêmico, incluindo falta de verificação institucional, ausência de integração com sistemas educacionais e questões de confiança entre usuários desconhecidos.
 
 \subsection{TECNOLOGIAS WEB PARA SISTEMAS COLABORATIVOS}
 
@@ -688,7 +690,7 @@ Este trabalho apresentou o desenvolvimento de um sistema integrado de compartilh
 
 A modelagem orientada a objetos, documentada através de diagramas de casos de uso, classes, sequência, atividades e componentes, permitiu especificar de forma clara e precisa a estrutura, comportamento e arquitetura do sistema. Os diagramas desenvolvidos estão disponíveis publicamente no repositório GitHub (\url{https://github.com/Vini43541111/Latex}), contribuindo para a transparência e replicabilidade do projeto.
 
-A análise de trabalhos relacionados demonstrou que, embora existam diversas plataformas de compartilhamento de caronas no mercado, como BlaBlaCar, Waze Carpool e iniciativas acadêmicas pontuais, nenhuma atende de forma completa as necessidades específicas do contexto universitário brasileiro. O sistema proposto apresenta diferenciais significativos através da integração institucional nativa via SSO, comunidade fechada e verificada, e recursos de segurança específicos para o ambiente acadêmico.
+A análise de trabalhos relacionados demonstrou que, embora existam diversas plataformas de compartilhamento de caronas no mercado e iniciativas acadêmicas pontuais, nenhuma atende de forma completa as necessidades específicas do contexto universitário brasileiro. O sistema proposto apresenta diferenciais significativos através da integração institucional nativa via SSO, comunidade fechada e verificada, e recursos de segurança específicos para o ambiente acadêmico.
 
 A definição detalhada dos requisitos funcionais (RF01 a RF06) contempla todas as operações essenciais identificadas nos diagramas UML: autenticação institucional, gestão de caronas, busca e solicitação, processamento de solicitações, comunicação entre usuários e sistema de avaliação com cálculo automático de reputação. Os requisitos não funcionais (RNF01 a RNF07) estabelecem padrões arquiteturais (camadas separadas), de segurança (HTTPS, SSO, LGPD), desempenho (consultas em menos de 2s), usabilidade, confiabilidade (transações), manutenibilidade e escalabilidade, garantindo qualidade técnica da solução.
 
