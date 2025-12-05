@@ -1,0 +1,20 @@
+@startuml sequencia-solicitar-carona
+title Diagrama de Sequência - Solicitar Carona
+
+actor Passageiro
+participant Sistema
+database BD
+actor Motorista
+
+Passageiro -> Sistema: buscarCaronas()
+Sistema -> BD: consultarCaronas()
+BD --> Sistema: listaCaronas
+Sistema --> Passageiro: exibirResultados()
+
+Passageiro -> Sistema: solicitarVaga(caronaId)
+Sistema -> BD: salvarSolicitacao()
+BD --> Sistema: ok
+Sistema -> Motorista: notificar()
+Sistema --> Passageiro: confirmação()
+
+@enduml

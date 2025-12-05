@@ -1,0 +1,22 @@
+@startuml sequencia-aceitar-solicitacao
+title Diagrama de Sequência - Aceitar Solicitação
+
+actor Motorista
+participant Sistema
+database BD
+actor Passageiro
+
+Motorista -> Sistema: visualizarSolicitações()
+Sistema -> BD: buscarSolicitações()
+BD --> Sistema: listaSolicitações
+Sistema --> Motorista: exibirLista()
+
+Motorista -> Sistema: aceitarSolicitação(id)
+Sistema -> BD: atualizarStatus()
+BD --> Sistema: ok
+Sistema -> BD: decrementarVagas()
+Sistema -> Passageiro: notificar()
+Sistema --> Motorista: confirmação()
+
+@enduml
+@enduml

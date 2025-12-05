@@ -1,0 +1,29 @@
+@startuml diagrama-caso-uso
+title Diagrama de Casos de Uso - Sistema de Carona
+
+actor Passageiro
+actor Motorista
+
+rectangle Sistema {
+  usecase "Fazer Login" as UC1
+  usecase "Buscar Carona" as UC2
+  usecase "Solicitar Vaga" as UC3
+  usecase "Criar Carona" as UC4
+  usecase "Aceitar Solicitação" as UC5
+  usecase "Enviar Mensagem" as UC6
+  usecase "Avaliar Usuário" as UC7
+}
+
+Passageiro --> UC1
+Passageiro --> UC2
+Passageiro --> UC3
+Passageiro --> UC6
+Passageiro --> UC7
+
+Motorista --> UC1
+Motorista --> UC4
+Motorista --> UC5
+Motorista --> UC6
+Motorista --> UC7
+
+@enduml

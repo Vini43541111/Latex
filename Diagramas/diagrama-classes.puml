@@ -1,0 +1,58 @@
+@startuml diagrama-classes
+title Diagrama de Classes - Sistema de Carona
+
+class Usuario {
+  - id
+  - nome
+  - email
+  - matricula
+  - reputacao
+  __
+  + autenticar()
+  + editarPerfil()
+}
+
+class Carona {
+  - id
+  - origem
+  - destino
+  - dataHora
+  - vagas
+  - status
+  __
+  + criar()
+  + cancelar()
+}
+
+class Solicitacao {
+  - id
+  - status
+  __
+  + aceitar()
+  + recusar()
+}
+
+class Avaliacao {
+  - id
+  - nota
+  - comentario
+  __
+  + registrar()
+}
+
+class Mensagem {
+  - id
+  - conteudo
+  - dataHora
+  __
+  + enviar()
+}
+
+Usuario "1" -- "*" Carona : oferece
+Usuario "1" -- "*" Solicitacao : faz
+Carona "1" -- "*" Solicitacao
+Usuario "1" -- "*" Avaliacao
+Carona "1" -- "*" Mensagem
+Usuario "1" -- "*" Mensagem
+
+@enduml

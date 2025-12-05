@@ -1,0 +1,18 @@
+@startuml atividade-criar-carona
+title Diagrama de Atividades - Criar Carona
+
+start
+:Preencher dados da carona;
+:Origem, destino, data, horário;
+:Definir vagas;
+if (Dados válidos?) then (sim)
+  :Salvar no banco;
+  :Notificar usuários;
+  :Confirmação;
+  stop
+else (não)
+  :Exibir erro;
+  stop
+endif
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml sequencia-autenticacao-sso
+title Diagrama de Sequência - Autenticação SSO
+
+actor Usuário
+participant Sistema
+participant SSO
+database BD
+
+Usuário -> Sistema: acessar()
+Sistema -> SSO: redirectLogin()
+Usuário -> SSO: login(user, senha)
+SSO -> SSO: validar()
+SSO --> Sistema: token
+Sistema -> BD: buscarUsuário()
+BD --> Sistema: dados
+Sistema --> Usuário: autenticado()
+
+@enduml

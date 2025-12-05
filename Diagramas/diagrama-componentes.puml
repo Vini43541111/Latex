@@ -1,0 +1,32 @@
+@startuml diagrama-componentes
+title Diagrama de Componentes - Sistema de Carona
+
+package "Frontend" {
+  [Interface Web]
+}
+
+package "Backend" {
+  [API REST]
+  [Serviço de Caronas]
+  [Serviço de Usuários]
+  [Serviço de Mensagens]
+}
+
+package "Dados" {
+  database "Banco de Dados" as BD
+}
+
+package "Externo" {
+  [SSO Institucional]
+}
+
+[Interface Web] --> [API REST]
+[API REST] --> [Serviço de Caronas]
+[API REST] --> [Serviço de Usuários]
+[API REST] --> [Serviço de Mensagens]
+[Serviço de Caronas] --> BD
+[Serviço de Usuários] --> BD
+[Serviço de Mensagens] --> BD
+[Serviço de Usuários] --> [SSO Institucional]
+
+@enduml

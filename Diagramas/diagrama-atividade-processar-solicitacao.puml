@@ -1,0 +1,24 @@
+@startuml atividade-processar-solicitacao
+title Diagrama de Atividades - Processar Solicitação
+
+start
+:Visualizar solicitações;
+if (Aceitar ou recusar?) then (aceitar)
+  :Verificar vagas;
+  if (Tem vagas?) then (sim)
+    :Aceitar;
+    :Notificar passageiro;
+    stop
+  else (não)
+    :Recusar por falta de vagas;
+    stop
+  endif
+else (recusar)
+  :Recusar solicitação;
+  :Notificar passageiro;
+  stop
+endif
+
+@enduml
+
+@enduml

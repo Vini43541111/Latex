@@ -1,0 +1,18 @@
+@startuml atividade-buscar-solicitar
+title Diagrama de Atividades - Buscar e Solicitar
+
+start
+:Informar origem e destino;
+:Buscar caronas;
+if (Encontrou?) then (sim)
+  :Visualizar lista;
+  :Selecionar carona;
+  :Solicitar vaga;
+  :Aguardar resposta;
+  stop
+else (não)
+  :Sem resultados;
+  stop
+endif
+
+@enduml

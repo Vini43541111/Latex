@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.26)  13 NOV 2025 22:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.26)  4 DEC 2025 22:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1631,7 +1631,7 @@ pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/viniv/AppDa
 ta/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free0.enc}{C:/Users/vi
 niv/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}]
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-11.
+14.
 
 (C:\Users\viniv\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1645,7 +1645,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 Class memoir Warning: The material used in the headers is too large
 (14.49998pt) for the given head height (14.22636pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 111.
+(in both cases you will find help in the memoir manual). on input line 114.
 
 
 Overfull \vbox (0.27362pt too high) has occurred while \output is active []
@@ -1671,63 +1671,63 @@ Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 [6]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 260.
+(Font)              <12> on input line 271.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 260.
+(Font)              <8> on input line 271.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 260.
+(Font)              <6> on input line 271.
 
-Overfull \hbox (9.4424pt too wide) in paragraph at lines 262--262
+Overfull \hbox (9.4424pt too wide) in paragraph at lines 273--273
 []|\T1/lmr/bx/n/12 (-20) Característica| 
  []
 
 
-Overfull \hbox (3.50706pt too wide) in paragraph at lines 262--262
+Overfull \hbox (3.50706pt too wide) in paragraph at lines 273--273
 []|\T1/lmr/bx/n/12 (-20) BlaBlaCar| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--262
+Underfull \hbox (badness 10000) in paragraph at lines 273--273
 []|\T1/lmr/bx/n/12 (+20) Waze
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--262
+Underfull \hbox (badness 10000) in paragraph at lines 273--273
 []|\T1/lmr/bx/n/12 (+20) Carona
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
 []|\T1/lmr/m/n/12 (+20) Casa-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--264
+Underfull \hbox (badness 10000) in paragraph at lines 275--275
 []|\T1/lmr/m/n/12 (+20) Verificação
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 276--276
 []|\T1/lmr/m/n/12 (+20) Comunidade
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--267
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
 []|\T1/lmr/m/n/12 (+20) Chat in-te-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--269
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
 []|\T1/lmr/m/n/12 (+20) Custo para
  []
 
 
-Overfull \hbox (16.55214pt too wide) in paragraph at lines 270--270
+Overfull \hbox (16.55214pt too wide) in paragraph at lines 281--281
 []|\T1/lmr/m/n/12 (-20) Descontinuado| 
  []
 
 
-Overfull \hbox (16.55214pt too wide) in paragraph at lines 270--270
+Overfull \hbox (16.55214pt too wide) in paragraph at lines 281--281
 []|\T1/lmr/m/n/12 (-20) Descontinuado| 
  []
 
@@ -1740,63 +1740,167 @@ Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
 [8]
-<Imagens/PrintUsuariodacarona.png, id=74, 2011.515pt x 1297.09593pt>
+<Imagens/PrintUsuariodacarona.png, id=82, 2011.515pt x 1297.09593pt>
 File: Imagens/PrintUsuariodacarona.png Graphic file (type png)
 <use Imagens/PrintUsuariodacarona.png>
 Package pdftex.def Info: Imagens/PrintUsuariodacarona.png  used on input line 3
-18.
+29.
 (pdftex.def)             Requested size: 348.2607pt x 224.56076pt.
-<Imagens/PrintCaroneiro.png, id=76, 2006.99812pt x 1235.36531pt>
+<Imagens/PrintCaroneiro.png, id=84, 2006.99812pt x 1235.36531pt>
 File: Imagens/PrintCaroneiro.png Graphic file (type png)
 <use Imagens/PrintCaroneiro.png>
-Package pdftex.def Info: Imagens/PrintCaroneiro.png  used on input line 332.
+Package pdftex.def Info: Imagens/PrintCaroneiro.png  used on input line 343.
 (pdftex.def)             Requested size: 348.2607pt x 214.36371pt.
-<Imagens/PrintCaroneiro2.png, id=77, 1952.79562pt x 1055.44313pt>
+<Imagens/PrintCaroneiro2.png, id=85, 1952.79562pt x 1055.44313pt>
 File: Imagens/PrintCaroneiro2.png Graphic file (type png)
 <use Imagens/PrintCaroneiro2.png>
-Package pdftex.def Info: Imagens/PrintCaroneiro2.png  used on input line 346.
+Package pdftex.def Info: Imagens/PrintCaroneiro2.png  used on input line 357.
 (pdftex.def)             Requested size: 348.2607pt x 188.21614pt.
 
 Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
-[9 <./Imagens/PrintUsuariodacarona.png>]
+[9]
 Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
-[10 <./Imagens/PrintCaroneiro.png> <./Imagens/PrintCaroneiro2.png>]
+[10 <./Imagens/PrintUsuariodacarona.png> <./Imagens/PrintCaroneiro.png> <./Imag
+ens/PrintCaroneiro2.png>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+81.
+
+(C:\Users\viniv\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+<Diagramas/diagrama-caso-uso.png, id=105, 1665.97406pt x 539.76656pt>
+File: Diagramas/diagrama-caso-uso.png Graphic file (type png)
+<use Diagramas/diagrama-caso-uso.png>
+Package pdftex.def Info: Diagramas/diagrama-caso-uso.png  used on input line 39
+1.
+(pdftex.def)             Requested size: 435.32422pt x 141.03607pt.
+<Diagramas/diagrama-classes.png, id=107, 701.62125pt x 1041.8925pt>
+File: Diagramas/diagrama-classes.png Graphic file (type png)
+<use Diagramas/diagrama-classes.png>
+Package pdftex.def Info: Diagramas/diagrama-classes.png  used on input line 403
+.
+(pdftex.def)             Requested size: 459.51054pt x 682.37306pt.
+
 Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
-[11]
+[11 <./Diagramas/diagrama-caso-uso.png>]
 Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
-[12]
+[12 <./Diagramas/diagrama-classes.png>]
+<Diagramas/diagrama-sequencia-autenticacao.png, id=127, 675.27281pt x 516.42938
+pt>
+File: Diagramas/diagrama-sequencia-autenticacao.png Graphic file (type png)
+<use Diagramas/diagrama-sequencia-autenticacao.png>
+Package pdftex.def Info: Diagramas/diagrama-sequencia-autenticacao.png  used on
+ input line 417.
+(pdftex.def)             Requested size: 411.14528pt x 314.43834pt.
+<Diagramas/diagrama-sequencia-solicitar.png, id=129, 716.6775pt x 516.42938pt>
+File: Diagramas/diagrama-sequencia-solicitar.png Graphic file (type png)
+<use Diagramas/diagrama-sequencia-solicitar.png>
+Package pdftex.def Info: Diagramas/diagrama-sequencia-solicitar.png  used on in
+put line 427.
+(pdftex.def)             Requested size: 411.14528pt x 296.26689pt.
+<Diagramas/diagrama-sequencia-avaliar.png, id=131, 662.475pt x 516.42938pt>
+File: Diagramas/diagrama-sequencia-avaliar.png Graphic file (type png)
+<use Diagramas/diagrama-sequencia-avaliar.png>
+Package pdftex.def Info: Diagramas/diagrama-sequencia-avaliar.png  used on inpu
+t line 437.
+(pdftex.def)             Requested size: 411.14528pt x 320.50598pt.
+<Diagramas/diagrama-atividade-criar-carona.png, id=133, 662.475pt x 505.89pt>
+File: Diagramas/diagrama-atividade-criar-carona.png Graphic file (type png)
+<use Diagramas/diagrama-atividade-criar-carona.png>
+Package pdftex.def Info: Diagramas/diagrama-atividade-criar-carona.png  used on
+ input line 451.
+(pdftex.def)             Requested size: 338.58632pt x 258.55626pt.
+
 Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
-[13]
+[13 <./Diagramas/diagrama-sequencia-autenticacao.png>]
 Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
-[14]
+[14 <./Diagramas/diagrama-sequencia-solicitar.png> <./Diagramas/diagrama-sequen
+cia-avaliar.png>]
+<Diagramas/diagrama-atividade-buscar-solicitar.png, id=154, 662.475pt x 511.912
+5pt>
+File: Diagramas/diagrama-atividade-buscar-solicitar.png Graphic file (type png)
+
+<use Diagramas/diagrama-atividade-buscar-solicitar.png>
+Package pdftex.def Info: Diagramas/diagrama-atividade-buscar-solicitar.png  use
+d on input line 461.
+(pdftex.def)             Requested size: 338.58632pt x 261.63432pt.
+<Diagramas/diagrama-atividade-processar-solicitacao.png, id=156, 685.05937pt x 
+522.45187pt>
+File: Diagramas/diagrama-atividade-processar-solicitacao.png Graphic file (type
+ png)
+<use Diagramas/diagrama-atividade-processar-solicitacao.png>
+Package pdftex.def Info: Diagramas/diagrama-atividade-processar-solicitacao.png
+  used on input line 471.
+(pdftex.def)             Requested size: 338.58632pt x 258.22783pt.
+
 Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
-[15]
+[15 <./Diagramas/diagrama-atividade-criar-carona.png> <./Diagramas/diagrama-ati
+vidade-buscar-solicitar.png>]
+<Diagramas/diagrama-componentes.png, id=165, 1029.8475pt x 711.4078pt>
+File: Diagramas/diagrama-componentes.png Graphic file (type png)
+<use Diagramas/diagrama-componentes.png>
+Package pdftex.def Info: Diagramas/diagrama-componentes.png  used on input line
+ 483.
+(pdftex.def)             Requested size: 459.51054pt x 317.41675pt.
+
 Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
 
-[16]
+[16 <./Diagramas/diagrama-atividade-processar-solicitacao.png>]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
 
-LaTeX Warning: Empty bibliography on input line 585.
+
+[17 <./Diagramas/diagrama-componentes.png>]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[18]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[19]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[20]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[21]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[22]
+Overfull \vbox (0.27362pt too high) has occurred while \output is active []
+
+
+[23]
+
+LaTeX Warning: Empty bibliography on input line 707.
 
 
 Class memoir Warning: The material used in the headers is too large
 (14.49998pt) for the given head height (14.22636pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 588.
+(in both cases you will find help in the memoir manual). on input line 710.
 
 (unoesc-article.aux)
  ***********
@@ -1808,13 +1912,13 @@ Package logreq Info: Writing requests to 'unoesc-article.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35065 strings out of 474486
- 635710 string characters out of 5743755
- 1947542 words of memory out of 5000000
- 56673 multiletter control sequences out of 15000+600000
- 627892 words of font info for 167 fonts, out of 8000000 for 9000
+ 35265 strings out of 474486
+ 640767 string characters out of 5743755
+ 1946542 words of memory out of 5000000
+ 56811 multiletter control sequences out of 15000+600000
+ 636848 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,107p,1420b,4312s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,107p,1420b,4312s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -1830,10 +1934,13 @@ ype1/public/lm/lmbx12.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/lm/lmr10.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/lm/lmr12.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/lm/lmr7.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmss10.pfb>
-Output written on unoesc-article.pdf (16 pages, 1750369 bytes).
+/public/lm/lmr8.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmri12.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmss10.pfb><C:/Users/viniv/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmtt12.pfb>
+Output written on unoesc-article.pdf (23 pages, 2133797 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
- 43400 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 463 PDF objects out of 1000 (max. 8388607)
+ 100 named destinations out of 1000 (max. 500000)
+ 48085 words of extra memory for PDF output out of 51595 (max. 10000000)
 

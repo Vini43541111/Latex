@@ -103,11 +103,22 @@ As instituições de ensino superior, por sua vez, têm buscado alternativas par
 
 Diante deste cenário, surge a necessidade de desenvolver um sistema específico para o compartilhamento de caronas no contexto acadêmico, que considere as particularidades desse ambiente: a verificação de identidade através de registros acadêmicos, rotas regulares casa-universidade, horários compatíveis com a grade curricular e a necessidade de construir confiança entre os membros da comunidade universitária.
 
-Assim, o presente trabalho tem como objetivo geral desenvolver um sistema web integrado de compartilhamento de caronas para instituições de ensino superior, conectando estudantes motoristas com aqueles que necessitam de transporte, promovendo mobilidade sustentável, redução de custos e fortalecimento dos vínculos sociais na comunidade acadêmica.
+Assim, o presente trabalho tem como \textbf{objetivo geral} desenvolver um sistema web integrado de compartilhamento de caronas para instituições de ensino superior, baseado em arquitetura de componentes e modelagem orientada a objetos, conectando estudantes motoristas com aqueles que necessitam de transporte, promovendo mobilidade sustentável, redução de custos e fortalecimento dos vínculos sociais na comunidade acadêmica.
 
-Os objetivos específicos incluem: (i) analisar os sistemas de carona existentes e suas limitações no contexto acadêmico; (ii) identificar as necessidades específicas dos estudantes universitários em relação ao transporte; (iii) desenvolver uma plataforma web com funcionalidades de cadastro, busca e agendamento de caronas; (iv) implementar mecanismos de segurança e confiabilidade adequados ao ambiente universitário; (v) integrar o sistema aos portais institucionais das faculdades; e (vi) avaliar a viabilidade e efetividade da solução proposta.
+Os \textbf{objetivos específicos} incluem: 
 
-A relevância deste estudo reside na contribuição para a solução de problemas reais enfrentados pela comunidade acadêmica, aliando inovação tecnológica à responsabilidade social e ambiental. Além disso, o trabalho contribui para o avanço do conhecimento na área de sistemas web colaborativos e mobilidade urbana sustentável, oferecendo uma alternativa prática e replicável para instituições de ensino superior.
+\begin{enumerate}
+    \item Analisar sistemas de carona existentes (BlaBlaCar, Waze Carpool, Carona USP) identificando suas limitações no contexto acadêmico
+    \item Modelar o sistema utilizando diagramas UML (casos de uso, classes, sequência, atividades e componentes) para especificar requisitos e arquitetura
+    \item Definir requisitos funcionais e não funcionais baseados na modelagem desenvolvida
+    \item Especificar arquitetura em camadas (Apresentação, API, Serviços, Dados) com integração SSO institucional
+    \item Projetar modelo de classes contemplando entidades principais: Usuario, Carona, Solicitacao, Avaliacao e Mensagem
+    \item Definir fluxos de interação através de diagramas de sequência para operações críticas (autenticação, solicitação, aceite, avaliação)
+    \item Estabelecer processos de negócio através de diagramas de atividades para criação de caronas e processamento de solicitações
+    \item Documentar requisitos de segurança, desempenho e confiabilidade conforme padrões de engenharia de software
+\end{enumerate}
+
+A \textbf{relevância} deste estudo reside em múltiplos aspectos: (i) contribui para solução de problemas reais de mobilidade enfrentados pela comunidade acadêmica; (ii) aplica metodologia rigorosa de engenharia de software com modelagem UML completa; (iii) integra conceitos de economia colaborativa, segurança da informação e arquitetura de sistemas distribuídos; (iv) oferece solução tecnológica alinhada com responsabilidade social e ambiental; (v) documenta processo completo de análise, modelagem e especificação de requisitos, servindo como referência para trabalhos futuros; e (vi) demonstra aplicação prática de padrões de projeto e boas práticas de desenvolvimento de software.
 
 \section{REVISÃO BIBLIOGRÁFICA}\label{ssec:teor}
 
@@ -363,140 +374,247 @@ O processo colaborativo de desenvolvimento da ideia permitiu uma análise abrang
 
 \section{REQUISITOS DO SISTEMA}\label{sec:requisitos}
 
-Esta seção apresenta os requisitos funcionais e não funcionais identificados para o sistema de compartilhamento de caronas para faculdades, definidos com base na análise das necessidades dos usuários e nas características do ambiente acadêmico.
+Esta seção apresenta os requisitos funcionais e não funcionais identificados para o sistema de compartilhamento de caronas para faculdades, definidos com base na análise das necessidades dos usuários, nas características do ambiente acadêmico e na modelagem UML desenvolvida.
+
+\subsection{MODELAGEM DO SISTEMA}
+
+O sistema foi modelado utilizando a notação UML (Unified Modeling Language) para especificar requisitos, estrutura de classes, fluxos de interação e arquitetura de componentes. Os diagramas completos estão disponíveis no repositório GitHub do projeto: \url{https://github.com/Vini43541111/Latex}.
+
+\subsubsection{Diagrama de Casos de Uso}
+
+A Figura \ref{fig:caso-uso} apresenta os casos de uso principais do sistema, identificando dois atores principais (Passageiro e Motorista) e sete funcionalidades essenciais: fazer login via SSO institucional, buscar caronas, solicitar vaga, criar carona, aceitar solicitação, enviar mensagens e avaliar usuários.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Diagrama de Casos de Uso}
+    \label{fig:caso-uso}
+    \includegraphics[width=0.9\textwidth]{Diagramas/diagrama-caso-uso.png}
+    \fonte{Elaborado pelos autores (2024)}
+\end{figure}
+
+\subsubsection{Diagrama de Classes}
+
+O diagrama de classes (Figura \ref{fig:classes}) define a estrutura do modelo de domínio com cinco classes principais: Usuario (com atributos id, nome, email, matrícula e reputação), Carona (origem, destino, dataHora, vagas e status), Solicitacao (com status de pendente/aceita/recusada), Avaliacao (nota e comentário) e Mensagem (conteúdo e dataHora). Os relacionamentos estabelecem que um usuário pode oferecer múltiplas caronas, fazer várias solicitações e participar de avaliações.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Diagrama de Classes}
+    \label{fig:classes}
+    \includegraphics[width=0.95\textwidth]{Diagramas/diagrama-classes.png}
+    \fonte{Elaborado pelos autores (2024)}
+\end{figure}
+
+\subsubsection{Diagramas de Sequência}
+
+Os diagramas de sequência especificam os fluxos de interação entre os componentes do sistema para operações críticas:
+
+\textbf{Autenticação SSO:} A Figura \ref{fig:seq-autenticacao} demonstra o processo de login utilizando Single Sign-On institucional, onde o usuário acessa o sistema, é redirecionado para o SSO, realiza autenticação e retorna com token validado.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Diagrama de Sequência - Autenticação SSO}
+    \label{fig:seq-autenticacao}
+    \includegraphics[width=0.85\textwidth]{Diagramas/diagrama-sequencia-autenticacao.png}
+    \fonte{Elaborado pelos autores (2024)}
+\end{figure}
+
+\textbf{Solicitar Carona:} A Figura \ref{fig:seq-solicitar} mostra o fluxo completo onde o passageiro busca caronas, o sistema consulta o banco de dados, exibe resultados, permite solicitação de vaga e notifica o motorista.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Diagrama de Sequência - Solicitar Carona}
+    \label{fig:seq-solicitar}
+    \includegraphics[width=0.85\textwidth]{Diagramas/diagrama-sequencia-solicitar.png}
+    \fonte{Elaborado pelos autores (2024)}
+\end{figure}
+
+\textbf{Avaliar Usuário:} A Figura \ref{fig:seq-avaliar} apresenta o fluxo de avaliação após carona concluída, onde o usuário submete nota e comentário, o sistema salva no banco, atualiza a reputação calculada e notifica o avaliado.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Diagrama de Sequência - Avaliar Usuário}
+    \label{fig:seq-avaliar}
+    \includegraphics[width=0.85\textwidth]{Diagramas/diagrama-sequencia-avaliar.png}
+    \fonte{Elaborado pelos autores (2024)}
+\end{figure}
+
+\subsubsection{Diagramas de Atividades}
+
+Os diagramas de atividades modelam os processos de negócio e fluxos de decisão:
+
+\textbf{Criar Carona:} A Figura \ref{fig:ativ-criar} representa o processo de criação de carona, onde o motorista preenche dados (origem, destino, data, horário, vagas), o sistema valida, salva no banco, notifica usuários compatíveis e exibe confirmação.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Diagrama de Atividades - Criar Carona}
+    \label{fig:ativ-criar}
+    \includegraphics[width=0.7\textwidth]{Diagramas/diagrama-atividade-criar-carona.png}
+    \fonte{Elaborado pelos autores (2024)}
+\end{figure}
+
+\textbf{Buscar e Solicitar:} A Figura \ref{fig:ativ-buscar} mostra o fluxo do passageiro ao informar origem/destino, buscar caronas, visualizar lista, selecionar opção e solicitar vaga ou lidar com ausência de resultados.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Diagrama de Atividades - Buscar e Solicitar}
+    \label{fig:ativ-buscar}
+    \includegraphics[width=0.7\textwidth]{Diagramas/diagrama-atividade-buscar-solicitar.png}
+    \fonte{Elaborado pelos autores (2024)}
+\end{figure}
+
+\textbf{Processar Solicitação:} A Figura \ref{fig:ativ-processar} detalha o processo decisório do motorista ao visualizar solicitações, decidir entre aceitar ou recusar, verificar disponibilidade de vagas e notificar o passageiro.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Diagrama de Atividades - Processar Solicitação}
+    \label{fig:ativ-processar}
+    \includegraphics[width=0.7\textwidth]{Diagramas/diagrama-atividade-processar-solicitacao.png}
+    \fonte{Elaborado pelos autores (2024)}
+\end{figure}
+
+\subsubsection{Diagrama de Componentes}
+
+A Figura \ref{fig:componentes} apresenta a arquitetura do sistema em quatro camadas: Frontend (Interface Web), Backend (API REST com serviços de Caronas, Usuários e Mensagens), Dados (Banco de Dados) e Externo (SSO Institucional). Esta arquitetura em camadas garante separação de responsabilidades, facilitando manutenção e escalabilidade.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Diagrama de Componentes}
+    \label{fig:componentes}
+    \includegraphics[width=0.95\textwidth]{Diagramas/diagrama-componentes.png}
+    \fonte{Elaborado pelos autores (2024)}
+\end{figure}
 
 \subsection{REQUISITOS FUNCIONAIS}
 
-Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer aos usuários. A seguir, são apresentados os principais requisitos identificados:
+Com base na modelagem UML desenvolvida (diagramas de casos de uso, classes, sequência, atividades e componentes), foram identificados os seguintes requisitos funcionais essenciais do sistema:
 
-\subsubsection{RF01 - Autenticação e Cadastro}
+\subsubsection{RF01 - Autenticação e Gestão de Usuários}
 
 \begin{itemize}
-    \item \textbf{RF01.1:} O sistema deve permitir login via credenciais institucionais (SSO)
-    \item \textbf{RF01.2:} O sistema deve validar automaticamente o vínculo acadêmico do usuário
-    \item \textbf{RF01.3:} O sistema deve solicitar informações complementares no primeiro acesso (telefone, foto, preferências)
+    \item \textbf{RF01.1:} O sistema deve permitir login via Single Sign-On (SSO) integrado ao sistema institucional
+    \item \textbf{RF01.2:} O sistema deve validar credenciais através de protocolos SAML 2.0 ou OAuth 2.0
+    \item \textbf{RF01.3:} O sistema deve armazenar dados do usuário: id, nome, email, matrícula, curso e reputação
+    \item \textbf{RF01.4:} O usuário deve poder editar seu perfil após autenticação inicial
+    \item \textbf{RF01.5:} O sistema deve calcular automaticamente a reputação baseada em avaliações recebidas
 \end{itemize}
 
-\subsubsection{RF02 - Gestão de Perfil}
+\subsubsection{RF02 - Gestão de Caronas}
 
 \begin{itemize}
-    \item \textbf{RF02.1:} O usuário deve poder editar suas informações pessoais
-    \item \textbf{RF02.2:} O sistema deve permitir definir preferências de viagem (música, ar-condicionado, pets)
-    \item \textbf{RF02.3:} O usuário deve poder visualizar seu histórico de avaliações
+    \item \textbf{RF02.1:} O motorista deve criar caronas informando: origem, destino, data/horário e número de vagas
+    \item \textbf{RF02.2:} O sistema deve validar todos os dados antes de salvar no banco de dados
+    \item \textbf{RF02.3:} O sistema deve armazenar o status da carona (ativa, cancelada, concluída)
+    \item \textbf{RF02.4:} O motorista deve poder cancelar caronas criadas
+    \item \textbf{RF02.5:} O sistema deve notificar usuários compatíveis quando nova carona for criada
+    \item \textbf{RF02.6:} O sistema deve decrementar automaticamente as vagas quando solicitação for aceita
 \end{itemize}
 
-\subsubsection{RF03 - Oferta de Caronas}
+\subsubsection{RF03 - Busca e Solicitação de Caronas}
 
 \begin{itemize}
-    \item \textbf{RF03.1:} O motorista deve poder cadastrar rotas regulares com origem, destino e horários
-    \item \textbf{RF03.2:} O sistema deve permitir definir número de vagas disponíveis
-    \item \textbf{RF03.3:} O motorista deve poder estabelecer valor de contribuição (opcional)
-    \item \textbf{RF03.4:} O sistema deve permitir criar caronas pontuais ou recorrentes
-    \item \textbf{RF03.5:} O motorista deve poder cancelar ou editar caronas futuras
+    \item \textbf{RF03.1:} O passageiro deve buscar caronas informando origem e destino
+    \item \textbf{RF03.2:} O sistema deve consultar o banco de dados e retornar lista de caronas compatíveis
+    \item \textbf{RF03.3:} O sistema deve exibir detalhes da carona incluindo informações do motorista
+    \item \textbf{RF03.4:} O passageiro deve poder solicitar vaga em carona selecionada
+    \item \textbf{RF03.5:} O sistema deve salvar a solicitação com status \textit{pendente}
+    \item \textbf{RF03.6:} O sistema deve notificar o motorista sobre nova solicitação
 \end{itemize}
 
-\subsubsection{RF04 - Busca de Caronas}
+\subsubsection{RF04 - Processamento de Solicitações}
 
 \begin{itemize}
-    \item \textbf{RF04.1:} O sistema deve permitir busca por origem, destino e horário
-    \item \textbf{RF04.2:} O sistema deve exibir caronas compatíveis ordenadas por relevância
-    \item \textbf{RF04.3:} O usuário deve visualizar informações do motorista e avaliações
-    \item \textbf{RF04.4:} O sistema deve permitir filtros por preferências (gênero, pets, etc.)
+    \item \textbf{RF04.1:} O motorista deve visualizar lista de solicitações pendentes
+    \item \textbf{RF04.2:} O sistema deve exibir informações do passageiro solicitante
+    \item \textbf{RF04.3:} O motorista deve poder aceitar solicitações se houver vagas disponíveis
+    \item \textbf{RF04.4:} O motorista deve poder recusar solicitações
+    \item \textbf{RF04.5:} O sistema deve atualizar status da solicitação (aceita ou recusada)
+    \item \textbf{RF04.6:} O sistema deve notificar o passageiro sobre a decisão do motorista
+    \item \textbf{RF04.7:} O sistema deve verificar disponibilidade de vagas antes de aceitar solicitação
 \end{itemize}
 
-\subsubsection{RF05 - Solicitação e Confirmação}
+\subsubsection{RF05 - Comunicação}
 
 \begin{itemize}
-    \item \textbf{RF05.1:} O passageiro deve poder solicitar vaga em carona disponível
-    \item \textbf{RF05.2:} O motorista deve receber notificação de novas solicitações
-    \item \textbf{RF05.3:} O motorista deve poder aceitar ou recusar solicitações
-    \item \textbf{RF05.4:} O sistema deve notificar o passageiro sobre a decisão
+    \item \textbf{RF05.1:} O sistema deve permitir envio de mensagens entre motorista e passageiro
+    \item \textbf{RF05.2:} O sistema deve armazenar histórico de mensagens com data/hora
+    \item \textbf{RF05.3:} O sistema deve enviar notificações sobre novos eventos (solicitação, aceite, mensagem)
 \end{itemize}
 
-\subsubsection{RF06 - Comunicação}
+\subsubsection{RF06 - Sistema de Avaliação}
 
 \begin{itemize}
-    \item \textbf{RF06.1:} O sistema deve oferecer chat entre motorista e passageiro
-    \item \textbf{RF06.2:} O sistema deve enviar notificações push sobre atualizações da carona
-    \item \textbf{RF06.3:} O sistema deve permitir compartilhamento de localização em tempo real
-\end{itemize}
-
-\subsubsection{RF07 - Avaliação e Reputação}
-
-\begin{itemize}
-    \item \textbf{RF07.1:} Após a carona, ambos os usuários devem poder avaliar a experiência
-    \item \textbf{RF07.2:} O sistema deve calcular a reputação média do usuário
-    \item \textbf{RF07.3:} O sistema deve exibir estatísticas de caronas realizadas
-    \item \textbf{RF07.4:} O sistema deve permitir comentários nas avaliações
-\end{itemize}
-
-\subsubsection{RF08 - Segurança e Confiança}
-
-\begin{itemize}
-    \item \textbf{RF08.1:} O sistema deve permitir reportar comportamentos inadequados
-    \item \textbf{RF08.2:} O sistema deve oferecer botão de emergência vinculado a contatos
-    \item \textbf{RF08.3:} O sistema deve permitir bloqueio de usuários específicos
+    \item \textbf{RF06.1:} O sistema deve permitir que usuários avaliem uns aos outros após carona concluída
+    \item \textbf{RF06.2:} A avaliação deve incluir nota e comentário opcional
+    \item \textbf{RF06.3:} O sistema deve salvar a avaliação no banco de dados
+    \item \textbf{RF06.4:} O sistema deve atualizar a reputação do usuário avaliado automaticamente
+    \item \textbf{RF06.5:} O sistema deve notificar o usuário quando receber nova avaliação
+    \item \textbf{RF06.6:} O sistema deve exibir confirmação após registro de avaliação
 \end{itemize}
 
 \subsection{REQUISITOS NÃO FUNCIONAIS}
 
-Os requisitos não funcionais definem atributos de qualidade e restrições do sistema. São classificados segundo as categorias de Sommerville (2011).
+Com base na arquitetura de componentes desenvolvida e nas melhores práticas de engenharia de software, foram definidos os seguintes requisitos não funcionais:
 
-\subsubsection{RNF01 - Usabilidade}
+\subsubsection{RNF01 - Arquitetura e Tecnologia}
 
 \begin{itemize}
-    \item \textbf{RNF01.1:} A interface deve ser intuitiva e de fácil navegação
-    \item \textbf{RNF01.2:} O cadastro de carona deve ser concluído em no máximo 3 minutos
-    \item \textbf{RNF01.3:} O sistema deve seguir padrões de acessibilidade WCAG 2.1
-    \item \textbf{RNF01.4:} O design deve ser responsivo para dispositivos móveis e desktop
+    \item \textbf{RNF01.1:} O sistema deve seguir arquitetura em camadas: Apresentação, API, Serviços e Dados
+    \item \textbf{RNF01.2:} O frontend deve ser desenvolvido como Interface Web responsiva
+    \item \textbf{RNF01.3:} O backend deve expor API REST para comunicação com o frontend
+    \item \textbf{RNF01.4:} O sistema deve utilizar banco de dados relacional para persistência
+    \item \textbf{RNF01.5:} Cada funcionalidade deve estar encapsulada em serviços específicos (Caronas, Usuários, Mensagens)
 \end{itemize}
 
-\subsubsection{RNF02 - Desempenho}
+\subsubsection{RNF02 - Segurança e Autenticação}
 
 \begin{itemize}
-    \item \textbf{RNF02.1:} O tempo de resposta para buscas deve ser inferior a 2 segundos
-    \item \textbf{RNF02.2:} O sistema deve suportar até 10.000 usuários simultâneos
-    \item \textbf{RNF02.3:} O tempo de carregamento de páginas não deve exceder 3 segundos
+    \item \textbf{RNF02.1:} Todas as comunicações entre frontend e backend devem usar HTTPS
+    \item \textbf{RNF02.2:} O sistema deve integrar-se com SSO Institucional para autenticação
+    \item \textbf{RNF02.3:} Deve suportar protocolos SAML 2.0 e OAuth 2.0 para SSO
+    \item \textbf{RNF02.4:} Tokens de autenticação devem ter validade de 24 horas
+    \item \textbf{RNF02.5:} Dados pessoais devem estar em conformidade com a LGPD
 \end{itemize}
 
-\subsubsection{RNF03 - Segurança}
+\subsubsection{RNF03 - Desempenho}
 
 \begin{itemize}
-    \item \textbf{RNF03.1:} Todas as comunicações devem usar protocolo HTTPS
-    \item \textbf{RNF03.2:} Senhas devem ser armazenadas com hash bcrypt
-    \item \textbf{RNF03.3:} O sistema deve implementar proteção contra ataques CSRF e XSS
-    \item \textbf{RNF03.4:} Dados pessoais devem estar em conformidade com a LGPD
+    \item \textbf{RNF03.1:} Consultas ao banco de dados devem retornar resultados em menos de 2 segundos
+    \item \textbf{RNF03.2:} O sistema deve suportar pelo menos 1.000 usuários simultâneos
+    \item \textbf{RNF03.3:} Operações de criação, atualização e exclusão devem ser confirmadas em menos de 1 segundo
 \end{itemize}
 
-\subsubsection{RNF04 - Confiabilidade}
+\subsubsection{RNF04 - Usabilidade}
 
 \begin{itemize}
-    \item \textbf{RNF04.1:} O sistema deve ter disponibilidade de 99,5\%
-    \item \textbf{RNF04.2:} Backups automáticos devem ser realizados diariamente
-    \item \textbf{RNF04.3:} O sistema deve se recuperar de falhas em até 1 hora
+    \item \textbf{RNF04.1:} A interface deve ser intuitiva, permitindo criar carona em no máximo 5 cliques
+    \item \textbf{RNF04.2:} O sistema deve exibir mensagens claras de erro quando validações falharem
+    \item \textbf{RNF04.3:} Todas as operações devem fornecer feedback visual (confirmação ou erro)
+    \item \textbf{RNF04.4:} O design deve ser responsivo, funcionando em desktop e mobile
 \end{itemize}
 
-\subsubsection{RNF05 - Portabilidade}
+\subsubsection{RNF05 - Confiabilidade}
 
 \begin{itemize}
-    \item \textbf{RNF05.1:} O sistema deve funcionar nos navegadores Chrome, Firefox, Safari e Edge
-    \item \textbf{RNF05.2:} A aplicação deve ser compatível com Android 8+ e iOS 12+
+    \item \textbf{RNF05.1:} Operações críticas (aceitar solicitação) devem usar transações de banco de dados
+    \item \textbf{RNF05.2:} O sistema deve prevenir inconsistências (ex: aceitar solicitação sem vagas)
+    \item \textbf{RNF05.3:} Notificações devem ser enviadas de forma assíncrona para não bloquear operações
 \end{itemize}
 
 \subsubsection{RNF06 - Manutenibilidade}
 
 \begin{itemize}
-    \item \textbf{RNF06.1:} O código-fonte deve estar versionado em repositório Git
-    \item \textbf{RNF06.2:} O código deve seguir padrões de Clean Code
-    \item \textbf{RNF06.3:} Toda funcionalidade deve possuir documentação técnica
+    \item \textbf{RNF06.1:} O código deve seguir padrões de separação de responsabilidades
+    \item \textbf{RNF06.2:} Cada camada deve ser independente e substituível
+    \item \textbf{RNF06.3:} A API REST deve ser documentada seguindo padrão OpenAPI
+    \item \textbf{RNF06.4:} Classes do modelo de domínio devem refletir a modelagem UML
 \end{itemize}
 
-\subsubsection{RNF07 - Integração}
+\subsubsection{RNF07 - Escalabilidade}
 
 \begin{itemize}
-    \item \textbf{RNF07.1:} O sistema deve integrar-se via API com portais institucionais
-    \item \textbf{RNF07.2:} Deve suportar autenticação via OAuth 2.0 e SAML
-    \item \textbf{RNF07.3:} Deve fornecer API RESTful documentada em OpenAPI 3.0
+    \item \textbf{RNF07.1:} Serviços devem ser independentes para permitir escalonamento horizontal
+    \item \textbf{RNF07.2:} O sistema deve permitir adição de novos serviços sem impactar existentes
+    \item \textbf{RNF07.3:} A arquitetura deve permitir distribuição de carga entre múltiplos servidores
 \end{itemize}
 
 \section{PROCEDIMENTOS METODOLÓGICOS}\label{sec:metod}
@@ -566,17 +684,21 @@ A partir dessa análise, foram definidos os requisitos funcionais e não funcion
 
 \section{CONCLUSÃO}
 
-Este trabalho apresentou o desenvolvimento de um sistema integrado de compartilhamento de caronas para o ambiente acadêmico, conectando estudantes motoristas com aqueles que necessitam de transporte dentro da comunidade universitária.
+Este trabalho apresentou o desenvolvimento de um sistema integrado de compartilhamento de caronas para o ambiente acadêmico, baseado em modelagem UML completa e especificação rigorosa de requisitos, conectando estudantes motoristas com aqueles que necessitam de transporte dentro da comunidade universitária.
 
-A análise de trabalhos relacionados demonstrou que, embora existam diversas plataformas de compartilhamento de caronas no mercado, como BlaBlaCar, Waze Carpool e iniciativas acadêmicas pontuais, nenhuma atende de forma completa as necessidades específicas do contexto universitário brasileiro. O sistema proposto apresenta diferenciais significativos através da integração institucional nativa, comunidade fechada e verificada, e recursos de segurança específicos para o ambiente acadêmico.
+A modelagem orientada a objetos, documentada através de diagramas de casos de uso, classes, sequência, atividades e componentes, permitiu especificar de forma clara e precisa a estrutura, comportamento e arquitetura do sistema. Os diagramas desenvolvidos estão disponíveis publicamente no repositório GitHub (\url{https://github.com/Vini43541111/Latex}), contribuindo para a transparência e replicabilidade do projeto.
 
-A definição detalhada dos requisitos funcionais e não funcionais permitiu estruturar uma solução tecnicamente viável que contempla aspectos essenciais como autenticação institucional, gestão de perfis, oferta e busca de caronas, sistema de avaliações e recursos de segurança. Os requisitos não funcionais estabelecem padrões de qualidade em termos de usabilidade, desempenho, segurança, confiabilidade e integração, garantindo que o sistema atenda aos critérios esperados para aplicações web modernas.
+A análise de trabalhos relacionados demonstrou que, embora existam diversas plataformas de compartilhamento de caronas no mercado, como BlaBlaCar, Waze Carpool e iniciativas acadêmicas pontuais, nenhuma atende de forma completa as necessidades específicas do contexto universitário brasileiro. O sistema proposto apresenta diferenciais significativos através da integração institucional nativa via SSO, comunidade fechada e verificada, e recursos de segurança específicos para o ambiente acadêmico.
 
-A metodologia de pesquisa aplicada, com abordagem qualitativa, possibilitou coletar dados primários através de entrevistas com estudantes, análise documental de políticas institucionais e revisão bibliográfica sistemática. Esses instrumentos de coleta forneceram subsídios fundamentais para compreender as necessidades reais dos usuários e definir funcionalidades alinhadas com o contexto acadêmico.
+A definição detalhada dos requisitos funcionais (RF01 a RF06) contempla todas as operações essenciais identificadas nos diagramas UML: autenticação institucional, gestão de caronas, busca e solicitação, processamento de solicitações, comunicação entre usuários e sistema de avaliação com cálculo automático de reputação. Os requisitos não funcionais (RNF01 a RNF07) estabelecem padrões arquiteturais (camadas separadas), de segurança (HTTPS, SSO, LGPD), desempenho (consultas em menos de 2s), usabilidade, confiabilidade (transações), manutenibilidade e escalabilidade, garantindo qualidade técnica da solução.
 
-Os resultados obtidos indicam que a solução proposta pode contribuir significativamente para a redução dos problemas de mobilidade urbana no contexto universitário, promovendo sustentabilidade através da redução de veículos no campus, economia colaborativa mediante divisão de custos de transporte, e fortalecimento dos vínculos sociais na comunidade acadêmica.
+A metodologia de pesquisa aplicada, com abordagem qualitativa, possibilitou coletar dados primários através de entrevistas com estudantes, análise documental de políticas institucionais e revisão bibliográfica sistemática. A modelagem UML serviu como instrumento fundamental para traduzir necessidades dos usuários em especificações técnicas precisas, estabelecendo base sólida para futura implementação.
 
-O sistema representa uma inovação tecnológica que combina sustentabilidade ambiental, economia colaborativa e integração institucional, oferecendo uma alternativa viável e escalável aos problemas de mobilidade urbana enfrentados por milhões de estudantes universitários brasileiros. A arquitetura proposta permite replicação em diferentes instituições de ensino, potencializando o impacto social e ambiental da solução.
+Os resultados obtidos indicam que a solução proposta, fundamentada em engenharia de software rigorosa, pode contribuir significativamente para a redução dos problemas de mobilidade urbana no contexto universitário, promovendo: (i) sustentabilidade através da redução de veículos no campus; (ii) economia colaborativa mediante divisão de custos de transporte; (iii) fortalecimento dos vínculos sociais na comunidade acadêmica; e (iv) integração com infraestrutura tecnológica institucional existente.
+
+O sistema representa uma inovação tecnológica que combina sustentabilidade ambiental, economia colaborativa e integração institucional, oferecendo uma alternativa viável e escalável aos problemas de mobilidade urbana enfrentados por milhões de estudantes universitários brasileiros. A arquitetura em camadas proposta, documentada no diagrama de componentes, permite replicação em diferentes instituições de ensino, potencializando o impacto social e ambiental da solução.
+
+Como trabalhos futuros, sugere-se: (i) implementação do protótipo funcional baseado nos diagramas desenvolvidos; (ii) testes de usabilidade com usuários reais; (iii) análise de desempenho e escalabilidade sob carga; (iv) integração com APIs de mapas para otimização de rotas; (v) desenvolvimento de aplicativo móvel nativo; e (vi) estudos de impacto ambiental medindo redução efetiva de emissões de CO\textsubscript{2}.
 
 Como trabalhos futuros, sugere-se a implementação de um protótipo funcional para validação prática dos requisitos definidos, realização de testes com usuários reais, desenvolvimento de aplicativos móveis nativos para Android e iOS, e estabelecimento de parcerias com instituições de ensino para implantação piloto do sistema.
 

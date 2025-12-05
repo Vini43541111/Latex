@@ -1,0 +1,16 @@
+@startuml sequencia-avaliar-usuario
+title Diagrama de Sequência - Avaliar Usuário
+
+actor Usuário
+participant Sistema
+database BD
+actor Avaliado
+
+Usuário -> Sistema: avaliar(nota, comentário)
+Sistema -> BD: salvarAvaliação()
+BD --> Sistema: ok
+Sistema -> BD: atualizarReputação()
+Sistema -> Avaliado: notificar()
+Sistema --> Usuário: confirmação()
+
+@enduml
